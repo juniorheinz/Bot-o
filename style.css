@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+    }
+    
+    button {
+    background-color: #1d1d1d;
+    width: 300px;
+    height: 100px;
+    border: none;
+    border-radius: 5px;
+    color: #f6f6f6;
+    font-size: 36px;
+    transition: transform 0.5s ease;
+    }
+    
+    button:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        animation: glowing-border 1s linear
+        infinite;
+        border: 7px solid;
+        border-image: linear-gradient(45deg,
+        #ff006e, #8338ec, #3a86ff, #8338ec, #ff006e
+        ) 1;
+        outline: none;
+        box-shadow: 0px 0px 20px 2px #ff53da92;
+        }
+        
+        @keyframes glowing-border {
+        0% {
+        border-image-source: linear-gradient
+        (45deg, #ff006e, #8338ec, #3a86ff, #8338ec,
+        #96365f);
+        }
+        50% {
+        border-image-source: linear-gradient
+        (45deg, #3a86ff, #8338ec, #ff006e, #8338ec,
+        #3a86ff);
+        }
+        100% {
+        border-image-source: linear-gradient
+        (45deg, #ff006e, #8338ec, #3a86ff, #8338ec,
+        #ff006e);
+        }
+        }
